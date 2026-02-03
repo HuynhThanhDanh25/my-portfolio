@@ -29,10 +29,16 @@
         
         <h2>Gửi tin nhắn</h2>
         <div class="project">
-            <form>
-                <p><label>Tên:</label><br><input type="text" placeholder="Nhập tên của bạn"></p>
-                <p><label>Email:</label><br><input type="email" placeholder="Nhập email"></p>
-                <p><label>Tin nhắn:</label><br><textarea rows="4" placeholder="Nhập tin nhắn"></textarea></p>
+            <form id="contactForm">
+                <p><label for="name">Tên:</label><br>
+                <input type="text" id="name" placeholder="Nhập tên của bạn" required></p>
+                
+                <p><label for="email">Email:</label><br>
+                <input type="email" id="email" placeholder="Nhập email" required></p>
+                
+                <p><label for="message">Tin nhắn:</label><br>
+                <textarea id="message" rows="4" placeholder="Nhập tin nhắn" required></textarea></p>
+                
                 <button type="submit">Gửi tin nhắn</button>
             </form>
         </div>

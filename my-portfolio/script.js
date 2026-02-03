@@ -13,12 +13,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    const forms = document.querySelectorAll('form');
-    forms.forEach(function(form) {
-        form.addEventListener('submit', function(e) {
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Cảm ơn bạn đã gửi tin nhắn! Tôi sẽ liên hệ lại sớm.');
-            form.reset();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            
+            alert('Cảm ơn ' + name + ' đã gửi tin nhắn! Tôi sẽ liên hệ với bạn qua email: ' + email);
+            
+            contactForm.reset();
         });
+    }
+    
+    window.addEventListener('scroll', function() {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 50) {
+            nav.style.backgroundColor = 'rgba(51, 51, 51, 0.95)';
+            nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+        } else {
+            nav.style.backgroundColor = '#333';
+            nav.style.boxShadow = 'none';
+        }
     });
 });
