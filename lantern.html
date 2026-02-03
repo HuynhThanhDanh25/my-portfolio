@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đèn Kéo Quân - Huỳnh Thanh Danh</title>
+    <link rel="stylesheet" href="css/lantern.css">
+</head>
+<body>
+    <a href="index.html" class="back-button">← Quay lại Portfolio</a>
+    
+    <header class="lantern-header">
+        <h1>ĐÈN KÉO QUÂN</h1>
+        <p>Di sản văn hóa Việt Nam - Bài tập JavaScript</p>
+        <div class="controls">
+            <button id="stopBtn">Dừng đèn</button>
+            <button id="startBtn">Quay đèn</button>
+            <button id="speedUpBtn">Tăng tốc</button>
+            <button id="speedDownBtn">Giảm tốc</button>
+            <div class="speed-display">
+                Tốc độ: <span id="speedValue">5</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="lantern-container">
+        <div class="instructions">
+            <h3>Hướng dẫn:</h3>
+            <p>• Đưa chuột vào đèn để DỪNG quay</p>
+            <p>• Di chuột ra ngoài để TIẾP TỤC quay</p>
+            <p>• Sử dụng nút điều khiển để thay đổi tốc độ</p>
+        </div>
+
+        <div class="lantern-wrapper" id="lanternWrapper">
+            <div class="lantern" id="lantern">
+                <div class="face front">
+                    <img src="https://images.unsplash.com/photo-1529593548-8e8c7169365c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Hoa Sen">
+                    <div class="face-label">Hoa Sen</div>
+                </div>
+                <div class="face back">
+                    <img src="https://images.unsplash.com/photo-1528127269322-539801943592?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Vịnh Hạ Long">
+                    <div class="face-label">Vịnh Hạ Long</div>
+                </div>
+                <div class="face right">
+                    <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Phố Cổ Hội An">
+                    <div class="face-label">Phố Cổ Hội An</div>
+                </div>
+                <div class="face left">
+                    <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Ruộng bậc thang">
+                    <div class="face-label">Ruộng Bậc Thang</div>
+                </div>
+                <div class="face top">
+                    <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Chùa Thiên Mụ">
+                    <div class="face-label">Chùa Thiên Mụ</div>
+                </div>
+                <div class="face bottom">
+                    <img src="https://images.unsplash.com/photo-1523059623039-a9ed027e7fad?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Cầu Vàng Đà Nẵng">
+                    <div class="face-label">Cầu Vàng Đà Nẵng</div>
+                </div>
+                
+                <div class="lantern-top"></div>
+                <div class="lantern-bottom"></div>
+                <div class="lantern-light"></div>
+            </div>
+        </div>
+
+        <div class="info-panel">
+            <h3>Thông tin về đèn kéo quân:</h3>
+            <p>Đèn kéo quân là một loại đèn trung thu truyền thống của Việt Nam, có cấu tạo đặc biệt giúp các hình ảnh xoay tròn khi đèn thắp sáng.</p>
+            <p>Bài tập này sử dụng CSS3 3D Transform và JavaScript để mô phỏng hiệu ứng quay của đèn kéo quân.</p>
+            <p>6 mặt đèn hiển thị các danh lam thắng cảnh nổi tiếng của Việt Nam.</p>
+        </div>
+    </main>
+
+    <footer class="lantern-footer">
+        <p>© 2024 Huỳnh Thanh Danh - Bài tập JavaScript - Đèn Kéo Quân</p>
+        <p>Môn học: Lập trình Web - Kiểm tra giữa kỳ</p>
+    </footer>
+
+    <script src="js/lantern.js"></script>
+</body>
+</html>
