@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+.back-button:hover {
+    background: #2980b9;
+    transform: translateX(-5px);
+}
+
+.lantern-header {
+    text-align: center;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+.lantern-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    color: #f39c12;
+    text-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
+}
+
+.lantern-header p {
+    font-size: 1.2rem;
+    color: #bdc3c7;
+    margin-bottom: 30px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.controls button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.controls button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+.speed-display {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#speedValue {
+    color: #f39c12;
+    font-size: 1.2rem;
+}
+
+.lantern-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    gap: 40px;
+    margin: 20px 0;
+}
+
+.instructions {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    width: 80%;
+    text-align: center;
+}
+
+.instructions h3 {
+    color: #f39c12;
+    margin-bottom: 15px;
+}
+
+.instructions p {
+    margin: 5px 0;
+    color: #ecf0f1;
+}
+
+.lantern-wrapper {
+    width: 400px;
+    height: 400px;
+    perspective: 1000px;
+    position: relative;
+}
+
+.lantern {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(-10deg) rotateY(0deg);
+}
+
+.face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 3px solid #f39c12;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(243, 156, 18, 0.3);
+}
+
+.face img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.face-label {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(243, 156, 18, 0.9);
+    color: white;
+    text-align: center;
+    padding: 8px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.front {
+    transform: translateZ(100px);
+}
+
+.back {
+    transform: translateZ(-100px) rotateY(180deg);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+.lantern-top {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 40px;
+    background: #e74c3c;
+    border-radius: 10px 10px 0 0;
+}
+
+.lantern-bottom {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 60px;
+    background: #e74c3c;
+    border-radius: 0 0 10px 10px;
+}
+
+.lantern-light {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(243, 156, 18, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.info-panel {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    width: 80%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.info-panel h3 {
+    color: #f39c12;
+    margin-bottom: 15px;
+}
+
+.info-panel p {
+    margin: 10px 0;
+    line-height: 1.6;
+    color: #ecf0f1;
+}
+
+.lantern-footer {
+    text-align: center;
+    padding: 20px;
+    color: #bdc3c7;
+    font-size: 0.9rem;
+    width: 100%;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lantern-footer p {
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .lantern-wrapper {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .face {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .front {
+        transform: translateZ(75px);
+    }
+    
+    .back {
+        transform: translateZ(-75px) rotateY(180deg);
+    }
+    
+    .right {
+        transform: rotateY(90deg) translateZ(75px);
+    }
+    
+    .left {
+        transform: rotateY(-90deg) translateZ(75px);
+    }
+    
+    .top {
+        transform: rotateX(90deg) translateZ(75px);
+    }
+    
+    .bottom {
+        transform: rotateX(-90deg) translateZ(75px);
+    }
+    
+    .lantern-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+}
